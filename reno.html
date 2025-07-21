@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interior</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sort-buttons">
+        <button onclick="sortAscending()">Sort by Price (Low to High)</button>
+        <button onclick="sortDescending()">Sort by Price (High to Low)</button>
+    </div>
+
+    <script>
+        function sortAscending() {
+            var productsContainer = document.querySelector('.product-container');
+            var products = Array.from(productsContainer.children);
+            products.sort(function(a, b) {
+                var priceA = parseFloat(a.querySelector('.product-price').textContent.replace(/[^\d.]/g, ''));
+                var priceB = parseFloat(b.querySelector('.product-price').textContent.replace(/[^\d.]/g, ''));
+                return priceA - priceB;
+            });
+            products.forEach(function(product) {
+                productsContainer.appendChild(product);
+            });
+        }
+
+        function sortDescending() {
+            var productsContainer = document.querySelector('.product-container');
+            var products = Array.from(productsContainer.children);
+            products.sort(function(a, b) {
+                var priceA = parseFloat(a.querySelector('.product-price').textContent.replace(/[^\d.]/g, ''));
+                var priceB = parseFloat(b.querySelector('.product-price').textContent.replace(/[^\d.]/g, ''));
+                return priceB - priceA;
+            });
+            products.forEach(function(product) {
+                productsContainer.appendChild(product);
+            });
+        }
+    </script>
+    <div class="product-container">
+        <div class="product">
+            <img src="reno1.jpeg" alt="Renovation" width="450" height="500">
+            <div class="product-details">
+                <div class="product-caption">Creating spaces that tell stories</div>
+                <div class="product-price">$10.34K</div> 
+<div class="product-rating" style="--rating: 3;"></div>
+            
+        </div>
+        </div>
+        <div class="product">
+            <img src="reno2.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">Make Your House A Home</div>
+                <div class="product-price">$15.67K</div> 
+<div class="product-rating" style="--rating: 3;"></div>            
+
+        </div>
+        </div>
+         <div class="product">
+            <img src="reno3.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">Simplicity is the ultimate sophistication.</div>
+                <div class="product-price">$9.67K</div> 
+<div class="product-rating" style="--rating: 3;"></div>         
+        </div> 
+        </div>
+        <div class="product">
+            <img src="reno4.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">The details are not the details,they make design.</div>
+                <div class="product-price">$11.5K</div>
+<div class="product-rating" style="--rating: 3;"></div>           
+ </div>
+        </div> 
+       <div class="product">
+            <img src="reno5.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">It looks right,it is right</div>
+                <div class="product-price">$10.56K</div> 
+<div class="product-rating" style="--rating: 3;"></div>          
+  </div>
+        </div>  
+      <div class="product">
+            <img src="reno6.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">Be faithful to your own taste</div>
+                <div class="product-price">$14.22K</div> 
+<div class="product-rating" style="--rating: 3;"></div>            
+</div>
+        </div>
+ <div class="product">
+            <img src="reno7.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">Make Your House A Home</div>
+                <div class="product-price">$13.00K</div> 
+<div class="product-rating" style="--rating: 3;"></div>          
+  </div>
+        </div>
+ <div class="product">
+            <img src="reno8.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">Design as unique as you are</div>
+                <div class="product-price">$16.67K</div> 
+<div class="product-rating" style="--rating: 3;"></div>            
+</div>
+        </div>
+ <div class="product">
+            <img src="reno9.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">Discover the beauty within</div>
+                <div class="product-price">$12.53K</div> 
+<div class="product-rating" style="--rating: 3;"></div>          
+  </div>
+        </div>
+ <div class="product">
+            <img src="reno10.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">Home decor made easy</div>
+                <div class="product-price">$16.25K</div> 
+<div class="product-rating" style="--rating: 3;"></div>
+</div>
+        </div>
+ <div class="product">
+            <img src="reno11.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">Home is where </div>
+                <div class="product-price">$14.23K</div> 
+<div class="product-rating" style="--rating: 3;"></div>
+            </div>
+        </div>
+ <div class="product">
+            <img src="reno12.jpeg" alt="Renovation" width="450" height="300">
+            <div class="product-details">
+                <div class="product-caption">Happiness is a well-decorated room</div>
+                <div class="product-price">$11.57K</div> 
+<div class="product-rating" style="--rating: 3;"></div>            
+</div>
+        </div>
+    </div>    
+
+</body>
+</html>
